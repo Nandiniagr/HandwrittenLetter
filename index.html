@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="envelope" id="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="body"></div>
+        <div class="letter-preview">Click to open</div>
+    </div>
+    <div class="container" id="letterContainer" style="display: none;">
+        <div class="letter-canvas" id="letterCanvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+        <button onclick="addTextBox()">Add Text</button>
+        <div class="decorations">
+            <img src="tea1.jpg" class="decor" draggable="true" ondragstart="drag(event)" id="tea1">
+            <img src="flower1.jpg" class="decor" draggable="true" ondragstart="drag(event)" id="flower1">
+            <img src="candy1.jpg" class="decor" draggable="true" ondragstart="drag(event)" id="candy1">
+            <img src="spotify_code.png" class="decor" draggable="true" ondragstart="drag(event)" id="spotify">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
