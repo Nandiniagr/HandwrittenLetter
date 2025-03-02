@@ -1,0 +1,65 @@
+body {
+    font-family: "Brush Script MT",  cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5dc;
+    flex-direction: column;
+}
+.envelope {
+    width: 200px;
+    height: 150px;
+    background: #d4a373;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: #b5838d;
+    transition: transform 0.5s;
+}
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.letter-canvas {
+    width: 500px;
+    height: 700px;
+    background: white;
+    padding: 20px;
+    border: 2px solid #d4a373;
+    position: relative;
+    overflow: hidden;
+}
+.text-box {
+    position: absolute;
+    border: 1px dashed #888;
+    padding: 5px;
+    cursor: move;
+    background: transparent;
+    resize: both;
+    overflow: hidden;
+}
+.decorations {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.decor {
+    width: 50px;
+    height: 50px;
+    cursor: grab;
+}
